@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/aniek/Downloads/**)",
+      "Bash(python -c \":*)",
+      "Bash(pip install:*)",
+      "WebFetch(domain:aniekanisrael.lovable.app)",
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(dir C:UsersaniekDownloads /b)",
+      "Bash(git -C \"C:\\\\Users\\\\aniek\\\\AYP\" status)",
+      "Bash(grep -i -E \"\\\\.\\(png|jpg|jpeg|webp|svg\\)$\")",
+      "Bash(grep -iE \"\\\\.\\(png|jpg|jpeg|webp|svg|gif\\)$\")",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"Initial commit: premium landing page for Are You The Problem?:*)",
+      "Bash(gh repo:*)",
+      "Bash(npx --version)",
+      "Bash(npx vercel:*)",
+      "Read(//c/Users/aniek/AppData/Roaming/npm//**)",
+      "WebFetch(domain:selar.com)",
+      "Bash(git remote:*)",
+      "Bash(mv \"cover.jpg.jpg\" \"cover.jpg\")",
+      "Bash(mv \"author.jpg.png\" \"author.png\")",
+      "Bash(mv \"mockup1.jpg.png\" \"mockup1.png\")",
+      "Bash(mv \"mockup2.jpg.png\" \"mockup2.png\")"
+    ]
+  }
+}
