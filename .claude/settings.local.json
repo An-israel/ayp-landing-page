@@ -22,7 +22,9 @@
       "Bash(mv \"cover.jpg.jpg\" \"cover.jpg\")",
       "Bash(mv \"author.jpg.png\" \"author.png\")",
       "Bash(mv \"mockup1.jpg.png\" \"mockup1.png\")",
-      "Bash(mv \"mockup2.jpg.png\" \"mockup2.png\")"
+      "Bash(mv \"mockup2.jpg.png\" \"mockup2.png\")",
+      "Bash(git commit -m \"Fix button centering, wire cover image, add mockups to hero and solution section:*)",
+      "Bash(git push:*)"
     ]
   }
 }

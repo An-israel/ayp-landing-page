@@ -864,7 +864,7 @@
       margin-top: 10px;
     }
 
-    .price-reveal .btn-primary { margin-top: 28px; max-width: 420px; width: 100%; font-size: 1.2rem; padding: 22px 40px; }
+    .price-reveal .btn-primary { margin: 28px auto 0; max-width: 420px; width: 100%; font-size: 1.2rem; padding: 22px 40px; display: block !important; }
 
     .price-secure {
       display: flex;
@@ -1155,28 +1155,17 @@
 
       <div class="book-mockup-container">
         <!-- 3D Book Mockup -->
-        <!-- To use your real cover: replace the .book-cover-fallback div with <img src="images/cover.jpg" alt="Are You The Problem? Book Cover"> -->
         <div class="book-3d" aria-label="Are You The Problem? book cover">
           <div class="book-spine"></div>
           <div class="book-face">
-            <div class="book-cover-fallback">
-              <div class="cover-line"></div>
-              <div class="cover-question">?</div>
-              <div class="cover-title">Are You<br>The Problem?</div>
-              <div class="cover-line"></div>
-              <div class="cover-author">Aniekan Israel</div>
-            </div>
+            <img src="images/cover.jpg" alt="Are You The Problem? Book Cover" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0 6px 6px 0;" />
           </div>
         </div>
 
-        <!-- Additional Mockup Images -->
-        <!-- Replace img src with your actual mockup file paths -->
-        <div class="book-mockup-images">
-          <div class="mockup-img">
-            <img src="images/mockup1.png" alt="Book mockup 1" onerror="this.parentElement.style.background='#1e1e1e';this.style.display='none'" />
-          </div>
-          <div class="mockup-img">
-            <img src="images/mockup2.png" alt="Book mockup 2" onerror="this.parentElement.style.background='#1e1e1e';this.style.display='none'" />
+        <!-- Mockup below cover -->
+        <div class="book-mockup-images" style="grid-template-columns:1fr;">
+          <div class="mockup-img" style="aspect-ratio:16/9;">
+            <img src="images/mockup2.png" alt="Book mockup" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" />
           </div>
         </div>
       </div>
@@ -1250,24 +1239,19 @@
   <!-- SOLUTION -->
   <section class="solution-section">
     <div class="container-wide">
+      <div class="solution-text fade-in" style="max-width:720px;margin:0 auto 50px;text-align:center;">
+        <div class="section-label">The Book</div>
+        <h2>A Masterclass in<br><em>Owning Your Mind</em></h2>
+        <div class="divider" style="margin:20px auto;"></div>
+        <p style="color:#c0c0c0;font-size:1.05rem;line-height:1.85;">
+          <strong>Are You The Problem?</strong> is a raw, unflinching, deeply practical guide to the
+          eleven mental upgrades that separate people who stay stuck from people who grow, lead, and win.
+          Chapter by chapter, this book dismantles every cognitive trap keeping you small.
+        </p>
+      </div>
       <div class="solution-grid">
-        <div class="solution-text fade-in">
-          <div class="section-label">The Book</div>
-          <h2>A Masterclass in<br><em>Owning Your Mind</em></h2>
-          <div class="divider"></div>
-          <p>
-            <strong>Are You The Problem?</strong> is a raw, unflinching, deeply practical guide to the
-            eleven mental upgrades that separate people who stay stuck from people who grow, lead, and win.
-          </p>
-          <p>
-            Aniekan Israel doesn't offer platitudes. He delivers a surgical breakdown of exactly how your
-            thinking sabotages your potential — and precisely what you can do to rewire it.
-            Chapter by chapter, this book dismantles every cognitive trap keeping you small.
-          </p>
-          <p>
-            This is not light reading. This is a confrontation with the version of you that's been
-            standing in your own way — and a roadmap to becoming someone who doesn't.
-          </p>
+        <div class="fade-in" style="display:flex;align-items:center;justify-content:center;">
+          <img src="images/mockup1.png" alt="Book mockup" style="width:100%;max-width:420px;border-radius:12px;display:block;box-shadow:0 30px 80px rgba(0,0,0,0.6);" />
         </div>
 
         <div class="fade-in">
