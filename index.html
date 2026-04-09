@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Are You The Problem? — Aniekan Israel</title>
+  <meta name="description" content="The book that reveals the one thing holding you back from everything you want — and it starts in your mind. Get your copy for ₦3,000 today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8d5a3;
+      --gold-dark: #a07830;
+      --black: #080808;
+      --dark: #0f0f0f;
+      --dark2: #161616;
+      --dark3: #1e1e1e;
+      --white: #ffffff;
+      --off-white: #f0ece4;
+      --muted: #9a9a9a;
+      --red: #e05252;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── ANNOUNCEMENT BAR ── */
+    .announcement-bar {
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .announcement-bar span { font-weight: 400; margin-left: 8px; text-transform: none; letter-spacing: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--dark);
+      background-image:
+        radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,168,76,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 0% 100%, rgba(201,168,76,0.05) 0%, transparent 60%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 20px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '✦';
+      font-size: 0.6rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--gold-light);
+      font-weight: 500;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 24px;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: #c8c8c8;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.01em;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.4s ease;
+    }
+
+    .btn-primary:hover { background: #d4b05a; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.35); }
+    .btn-primary:hover::after { left: 100%; }
+
+    .hero-guarantee {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-guarantee svg { color: var(--gold); flex-shrink: 0; }
+
+    /* ── BOOK MOCKUP ── */
+    .book-mockup-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .book-3d {
+      position: relative;
+      width: 280px;
+      height: 380px;
+      transform: perspective(900px) rotateY(-18deg);
+      transition: transform 0.4s ease;
+      filter: drop-shadow(40px 30px 60px rgba(0,0,0,0.8));
+    }
+
+    .book-3d:hover { transform: perspective(900px) rotateY(-10deg); }
+
+    .book-face {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px 8px 8px 4px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a1008 0%, #2d1f0a 50%, #1a1008 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* When real cover image is available, it will show here */
+    .book-face img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CSS fallback book cover design */
+    .book-cover-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(160deg, #1c1204 0%, #2a1a08 40%, #0d0802 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      position: relative;
+      text-align: center;
+    }
+
+    .book-cover-fallback::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(201,168,76,0.03) 2px,
+        rgba(201,168,76,0.03) 4px
+      );
+    }
+
+    .book-cover-fallback .cover-line {
+      width: 60%;
+      height: 1px;
+      background: var(--gold);
+      margin: 10px auto;
+      opacity: 0.6;
+    }
+
+    .book-cover-fallback .cover-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1.15;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-cover-fallback .cover-question {
+      font-size: 2.5rem;
+      color: var(--gold-light);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 6px;
+    }
+
+    .book-cover-fallback .cover-author {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.7);
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+    }
+
+    .book-spine {
+      position: absolute;
+      left: -22px;
+      top: 0;
+      width: 22px;
+      height: 100%;
+      background: linear-gradient(to right, #0a0600, #1a1005);
+      transform-origin: right;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .book-mockup-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .mockup-img {
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--dark3);
+      aspect-ratio: 4/3;
+    }
+
+    .mockup-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    .mockup-img img:hover { opacity: 1; }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 90px 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .container-wide { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    h2 em { font-style: italic; color: var(--gold); }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 20px 0;
+    }
+
+    /* ── SOCIAL PROOF ── */
+    .social-proof {
+      background: var(--dark2);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 28px 20px;
+    }
+
+    .social-proof-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .proof-stat {
+      text-align: center;
+    }
+
+    .proof-stat .number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--gold);
+      display: block;
+    }
+
+    .proof-stat .label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .proof-divider {
+      width: 1px;
+      height: 50px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ── PAIN ── */
+    .pain-section {
+      background: var(--dark);
+    }
+
+    .pain-section .container { text-align: center; }
+
+    .pain-intro {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    .pain-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+      text-align: left;
+    }
+
+    .pain-card {
+      background: var(--dark2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pain-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--red);
+    }
+
+    .pain-card .check { font-size: 1.4rem; margin-bottom: 10px; }
+    .pain-card p { font-size: 0.95rem; color: #c0c0c0; line-height: 1.6; }
+
+    .pain-question {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-style: italic;
+      color: var(--off-white);
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+
+    .pain-answer {
+      font-size: 1.05rem;
+      color: #b0b0b0;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* ── SOLUTION ── */
+    .solution-section {
+      background: linear-gradient(180deg, var(--dark2) 0%, var(--dark) 100%);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .solution-text p {
+      color: #c0c0c0;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .solution-text p strong { color: var(--off-white); }
+
+    .chapter-list {
+      list-style: none;
+      margin-top: 30px;
+    }
+
+    .chapter-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.95rem;
+      color: #c8c8c8;
+    }
+
+    .chapter-list li:last-child { border-bottom: none; }
+
+    .chapter-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .chapter-title {
+      font-weight: 600;
+      color: var(--off-white);
+      display: block;
+    }
+
+    .chapter-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── BENEFITS SECTION ── */
+    .benefits-section {
+      background: var(--black);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .benefit-card {
+      background: var(--dark2);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .benefit-card:hover {
+      border-color: rgba(201,168,76,0.35);
+      transform: translateY(-4px);
+    }
+
+    .benefit-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .benefit-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--off-white);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .benefit-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section {
+      background: var(--dark2);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .testimonial-card {
+      background: var(--dark3);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      color: #d0d0d0;
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+
+    .author-name { font-weight: 600; font-size: 0.88rem; color: var(--off-white); }
+    .author-title { font-size: 0.78rem; color: var(--muted); }
+
+    /* ── ABOUT AUTHOR ── */
+    .author-section {
+      background: var(--dark);
+    }
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .author-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--dark3);
+      border: 1px solid rgba(201,168,76,0.15);
+      position: relative;
+    }
+
+    .author-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CSS fallback author photo */
+    .author-photo-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--dark3), var(--dark2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .author-info p {
+      color: #c0c0c0;
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .author-credentials {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .author-credentials li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--gold-light);
+      padding: 6px 0;
+    }
+
+    .author-credentials li::before {
+      content: '✦';
+      color: var(--gold);
+      font-size: 0.6rem;
+    }
+
+    /* ── BONUSES ── */
+    .bonuses-section {
+      background: var(--black);
+    }
+
+    .bonus-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .bonus-header .value-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .bonuses-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .bonus-item {
+      background: var(--dark2);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+      transition: border-color 0.2s;
+    }
+
+    .bonus-item:hover { border-color: rgba(201,168,76,0.4); }
+
+    .bonus-number {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+
+    .bonus-content h3 {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--off-white);
+      margin-bottom: 6px;
+    }
+
+    .bonus-content p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .bonus-value {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .bonus-value .was { font-size: 0.78rem; color: var(--muted); text-decoration: line-through; }
+    .bonus-value .free { font-size: 1.2rem; font-weight: 800; color: var(--gold); }
+
+    /* ── VALUE STACK ── */
+    .value-stack-section {
+      background: linear-gradient(180deg, var(--dark2) 0%, var(--dark) 100%);
+    }
+
+    .value-stack-box {
+      background: var(--dark3);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .value-stack-box h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 36px;
+    }
+
+    .value-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.95rem;
+    }
+
+    .value-line:last-of-type { border-bottom: none; }
+
+    .value-line .item-name { color: #c8c8c8; }
+    .value-line .item-name strong { color: var(--off-white); }
+
+    .value-line .item-price {
+      font-weight: 700;
+      color: var(--off-white);
+      white-space: nowrap;
+    }
+
+    .value-line .item-price.free { color: var(--gold); font-size: 0.85rem; }
+
+    .value-total {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 2px solid rgba(201,168,76,0.3);
+      text-align: center;
+    }
+
+    .value-total .total-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .value-total .total-amount {
+      font-size: 1.4rem;
+      text-decoration: line-through;
+      color: var(--muted);
+    }
+
+    .price-reveal {
+      text-align: center;
+      margin-top: 36px;
+    }
+
+    .price-reveal .today-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .price-reveal .big-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .price-reveal .big-price sup {
+      font-size: 1.8rem;
+      vertical-align: super;
+      color: var(--gold);
+    }
+
+    .price-reveal .savings {
+      display: inline-block;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .price-reveal .btn-primary { margin-top: 28px; max-width: 420px; width: 100%; font-size: 1.2rem; padding: 22px 40px; }
+
+    .price-secure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* ── SCARCITY ── */
+    .scarcity-section {
+      background: rgba(201,168,76,0.04);
+      border-top: 1px solid rgba(201,168,76,0.15);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 40px 20px;
+    }
+
+    .scarcity-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .scarcity-inner p {
+      font-size: 1.05rem;
+      color: var(--off-white);
+      line-height: 1.7;
+    }
+
+    .scarcity-inner strong { color: var(--gold); }
+
+    .countdown {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin: 24px 0;
+    }
+
+    .countdown-unit {
+      text-align: center;
+    }
+
+    .countdown-unit .num {
+      background: var(--dark3);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--gold);
+      display: block;
+      min-width: 70px;
+    }
+
+    .countdown-unit .unit-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .countdown-sep {
+      font-size: 2.2rem;
+      color: var(--gold);
+      align-self: flex-start;
+      margin-top: 12px;
+    }
+
+    /* ── GUARANTEE ── */
+    .guarantee-section {
+      background: var(--dark);
+    }
+
+    .guarantee-box {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--dark2);
+      border: 2px solid rgba(201,168,76,0.2);
+      border-radius: 20px;
+      padding: 50px 40px;
+      text-align: center;
+    }
+
+    .guarantee-badge {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.8rem;
+    }
+
+    .guarantee-box h2 { font-size: 1.8rem; margin-bottom: 16px; }
+
+    .guarantee-box p {
+      color: #c0c0c0;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta-section {
+      background: linear-gradient(135deg, #0d0802 0%, #1a1005 50%, #0d0802 100%);
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+
+    .final-cta-section .container { text-align: center; }
+
+    .final-cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 16px;
+    }
+
+    .final-cta-section p {
+      color: #b0b0b0;
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+
+    /* ── PS SECTION ── */
+    .ps-section {
+      background: var(--black);
+      padding: 50px 20px;
+    }
+
+    .ps-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--dark2);
+      border-left: 3px solid var(--gold);
+      padding: 30px 32px;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .ps-box p {
+      color: #c0c0c0;
+      font-size: 0.98rem;
+      line-height: 1.85;
+    }
+
+    .ps-box strong { color: var(--off-white); }
+    .ps-box .ps-label { color: var(--gold); font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--dark2); }
+
+    .faq-list { max-width: 700px; margin: 40px auto 0; }
+
+    details {
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    details:last-child { border-bottom: none; }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--off-white);
+      cursor: pointer;
+      list-style: none;
+      gap: 16px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--gold);
+      font-weight: 300;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::after { content: '−'; }
+
+    details p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.8;
+      padding-bottom: 22px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .book-3d { width: 220px; height: 300px; transform: perspective(900px) rotateY(-12deg); }
+      .solution-grid { grid-template-columns: 1fr; gap: 40px; }
+      .author-grid { grid-template-columns: 1fr; gap: 32px; }
+      .author-photo { max-width: 260px; }
+      .bonus-item { grid-template-columns: auto 1fr; }
+      .bonus-value { display: none; }
+      .value-stack-box { padding: 30px 20px; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 60px 20px; }
+      .hero { padding: 60px 20px 50px; }
+      .btn-primary { font-size: 0.95rem; padding: 16px 28px; }
+      .proof-divider { display: none; }
+      .book-mockup-images { grid-template-columns: 1fr; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light), var(--gold));
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.3); }
+      50% { box-shadow: 0 0 40px rgba(201,168,76,0.6); }
+    }
+
+    .pulse { animation: pulse-glow 2.5s ease-in-out infinite; }
+
+    /* Fade-in on scroll (JS-powered) */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    🔥 Launch Offer<span>— Get the full book + 4 FREE bonuses for just ₦3,000. Offer may end soon.</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">New Book Release</div>
+        <h1>Are You <em>The</em><br>Problem?</h1>
+        <p class="hero-subtitle">The Mirror You've Been Avoiding.</p>
+        <p class="hero-desc">
+          Most people spend their lives chasing better circumstances, better jobs, better relationships —
+          never realising the single bottleneck sitting between them and everything they want
+          is the way they <strong>think</strong>. This book is that mirror.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#buy-now" class="btn-primary pulse">
+            Yes, I Want The Book — ₦3,000 →
+          </a>
+          <p class="hero-guarantee">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Satisfaction Guaranteed &nbsp;·&nbsp; Instant Digital Delivery
+          </p>
+        </div>
+      </div>
+
+      <div class="book-mockup-container">
+        <!-- 3D Book Mockup -->
+        <!-- To use your real cover: replace the .book-cover-fallback div with <img src="images/cover.jpg" alt="Are You The Problem? Book Cover"> -->
+        <div class="book-3d" aria-label="Are You The Problem? book cover">
+          <div class="book-spine"></div>
+          <div class="book-face">
+            <div class="book-cover-fallback">
+              <div class="cover-line"></div>
+              <div class="cover-question">?</div>
+              <div class="cover-title">Are You<br>The Problem?</div>
+              <div class="cover-line"></div>
+              <div class="cover-author">Aniekan Israel</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Mockup Images -->
+        <!-- Replace img src with your actual mockup file paths -->
+        <div class="book-mockup-images">
+          <div class="mockup-img">
+            <img src="images/mockup1.jpg" alt="Book mockup 1" onerror="this.parentElement.style.background='#1e1e1e';this.style.display='none'" />
+          </div>
+          <div class="mockup-img">
+            <img src="images/mockup2.jpg" alt="Book mockup 2" onerror="this.parentElement.style.background='#1e1e1e';this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="social-proof">
+    <div class="social-proof-inner">
+      <div class="proof-stat">
+        <span class="number">500+</span>
+        <span class="label">Readers</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <span class="number">11</span>
+        <span class="label">Power Chapters</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <span class="number">4</span>
+        <span class="label">Free Bonuses</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <span class="number">⭐⭐⭐⭐⭐</span>
+        <span class="label">Rated by Readers</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAIN / PROBLEM -->
+  <section class="pain-section">
+    <div class="container">
+      <div class="section-label fade-in">Be Honest With Yourself</div>
+      <div class="pain-points fade-in">
+        <div class="pain-card">
+          <div class="check">😤</div>
+          <p>You're working hard, but you're not breaking through. Something keeps pulling you back to the same level.</p>
+        </div>
+        <div class="pain-card">
+          <div class="check">🔁</div>
+          <p>You start strong on goals but abandon them. The cycle of starting over is exhausting and demoralising.</p>
+        </div>
+        <div class="pain-card">
+          <div class="check">🧠</div>
+          <p>Your thoughts betray you. Fear, overthinking, imposter syndrome — they show up at the worst moments.</p>
+        </div>
+        <div class="pain-card">
+          <div class="check">💭</div>
+          <p>You have the vision but struggle to execute. Ideas are abundant; follow-through is painfully scarce.</p>
+        </div>
+        <div class="pain-card">
+          <div class="check">😶</div>
+          <p>You feel intellectually stuck — like you're thinking the same thoughts and getting the same results.</p>
+        </div>
+        <div class="pain-card">
+          <div class="check">⚡</div>
+          <p>You wonder why others seem to "figure it out" while you're still waiting for your breakthrough moment.</p>
+        </div>
+      </div>
+
+      <p class="pain-question fade-in">"What if none of those circumstances are the real problem?"</p>
+      <p class="pain-answer fade-in">
+        The uncomfortable truth — and the most liberating one — is that the root of almost every stagnation,
+        every repeated failure, every unfulfilled dream points to <strong>one place</strong>: the patterns living inside your mind.
+      </p>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution-section">
+    <div class="container-wide">
+      <div class="solution-grid">
+        <div class="solution-text fade-in">
+          <div class="section-label">The Book</div>
+          <h2>A Masterclass in<br><em>Owning Your Mind</em></h2>
+          <div class="divider"></div>
+          <p>
+            <strong>Are You The Problem?</strong> is a raw, unflinching, deeply practical guide to the
+            eleven mental upgrades that separate people who stay stuck from people who grow, lead, and win.
+          </p>
+          <p>
+            Aniekan Israel doesn't offer platitudes. He delivers a surgical breakdown of exactly how your
+            thinking sabotages your potential — and precisely what you can do to rewire it.
+            Chapter by chapter, this book dismantles every cognitive trap keeping you small.
+          </p>
+          <p>
+            This is not light reading. This is a confrontation with the version of you that's been
+            standing in your own way — and a roadmap to becoming someone who doesn't.
+          </p>
+        </div>
+
+        <div class="fade-in">
+          <ul class="chapter-list">
+            <li>
+              <span class="chapter-num">1</span>
+              <div>
+                <span class="chapter-title">Mind Prep</span>
+                <span class="chapter-desc">Prime your mind before the battle — because most people lose before they even begin.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">2</span>
+              <div>
+                <span class="chapter-title">Finding Purpose</span>
+                <span class="chapter-desc">Stop drifting. Discover the north star that makes hard work feel inevitable, not forced.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">3</span>
+              <div>
+                <span class="chapter-title">Delayed Gratification</span>
+                <span class="chapter-desc">The one discipline that separates the exceptional from the average — and how to master it.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">4</span>
+              <div>
+                <span class="chapter-title">T.E.A. — Think. Engage. Act.</span>
+                <span class="chapter-desc">A three-part framework for turning thought into measurable, real-world results.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">5</span>
+              <div>
+                <span class="chapter-title">Cognitive Endurance</span>
+                <span class="chapter-desc">Build a mind that doesn't quit when the work gets hard, boring, or uncomfortable.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">6</span>
+              <div>
+                <span class="chapter-title">Metacognition</span>
+                <span class="chapter-desc">Learn to think about how you think — and catch the mental traps before they catch you.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">7</span>
+              <div>
+                <span class="chapter-title">Ideation</span>
+                <span class="chapter-desc">Generate ideas that matter. Go from "I have nothing" to "I can't stop thinking".</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">8</span>
+              <div>
+                <span class="chapter-title">Cognitive Diversity</span>
+                <span class="chapter-desc">Why thinking the same way is your biggest growth ceiling — and how to break it.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">9</span>
+              <div>
+                <span class="chapter-title">Leverage</span>
+                <span class="chapter-desc">Stop grinding and start multiplying. Learn to do more with what you already have.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">10</span>
+              <div>
+                <span class="chapter-title">Liminal Intelligence</span>
+                <span class="chapter-desc">Navigate transitions and "in-between" seasons with clarity instead of paralysis.</span>
+              </div>
+            </li>
+            <li>
+              <span class="chapter-num">11</span>
+              <div>
+                <span class="chapter-title">Growth Mindset</span>
+                <span class="chapter-desc">The final upgrade — building a mind that sees setbacks as fuel, not failure.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL WALK AWAY WITH -->
+  <section class="benefits-section">
+    <div class="container-wide">
+      <div class="section-label fade-in" style="text-align:center">After Reading This Book</div>
+      <h2 style="text-align:center" class="fade-in">You Will Walk Away With <em>This</em></h2>
+
+      <div class="benefits-grid">
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">🔍</div>
+          <h3>Ruthless Self-Awareness</h3>
+          <p>You'll be able to spot your cognitive blind spots in real-time and correct them before they cost you opportunities.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">🎯</div>
+          <h3>Crystal-Clear Purpose</h3>
+          <p>A defined, deeply personal sense of direction so every decision you make finally has a "why" behind it.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">🧱</div>
+          <h3>Unshakeable Mental Stamina</h3>
+          <p>The tools to push through resistance, boredom, and self-doubt — the three things that kill most goals.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">⚙️</div>
+          <h3>A System for Execution</h3>
+          <p>Move from brilliant ideas that go nowhere to a repeatable process that turns intention into results.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">🌱</div>
+          <h3>A Growth-Wired Mind</h3>
+          <p>A fundamentally different relationship with failure, feedback, and change — the bedrock of lasting success.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">🔑</div>
+          <h3>The Leverage Mindset</h3>
+          <p>Stop overworking and start multiplying. Learn to achieve disproportionate results with focused effort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container-wide">
+      <div class="section-label fade-in" style="text-align:center">What Readers Are Saying</div>
+      <h2 style="text-align:center" class="fade-in">Real People. <em>Real Results.</em></h2>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <blockquote>"This book hit me harder than I expected. The chapter on Metacognition alone was worth ten times the price. I've started catching myself mid-thought and redirecting. It's a game-changer."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">TK</div>
+            <div>
+              <div class="author-name">Tunde K.</div>
+              <div class="author-title">Entrepreneur, Lagos</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I've read tons of self-help books. Most feel fluffy. This one felt like someone sat down and refused to let me lie to myself. The T.E.A. framework is now part of my daily routine."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">AF</div>
+            <div>
+              <div class="author-name">Adaeze F.</div>
+              <div class="author-title">Corporate Professional, Abuja</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I kept highlighting. I kept re-reading. The Delayed Gratification chapter reframed how I see every short-term sacrifice. This book should be required reading for any serious person."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">EB</div>
+            <div>
+              <div class="author-name">Emeka B.</div>
+              <div class="author-title">Creative Director, Port Harcourt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE AUTHOR -->
+  <section class="author-section">
+    <div class="container-wide">
+      <div class="author-grid">
+        <div class="fade-in">
+          <div class="author-photo">
+            <!-- Replace src with actual author photo path -->
+            <img src="images/author.jpg" alt="Aniekan Israel" onerror="this.style.display='none'" />
+            <div class="author-photo-fallback">
+              <span>Author Photo<br>Aniekan Israel</span>
+            </div>
+          </div>
+        </div>
+        <div class="author-info fade-in">
+          <div class="section-label">About The Author</div>
+          <h2>Aniekan <em>Israel</em></h2>
+          <div class="divider"></div>
+          <p>
+            Aniekan Israel is a Mindset Coach, Designer, and Speaker whose work sits at the intersection
+            of cognitive performance and personal transformation. He has spent years studying the gap
+            between people who know what to do and people who actually do it — and why that gap exists.
+          </p>
+          <p>
+            Through coaching, speaking, and his writing, Aniekan has helped hundreds of young Africans
+            unlock the mental clarity needed to build careers, businesses, and lives they're proud of.
+          </p>
+          <p>
+            <em>Are You The Problem?</em> is his most confrontational, most honest, and most
+            transformative work to date.
+          </p>
+          <ul class="author-credentials">
+            <li>Mindset Coach &amp; Cognitive Performance Specialist</li>
+            <li>Designer &amp; Creative Strategist</li>
+            <li>Speaker — Corporate, Faith &amp; Youth Platforms</li>
+            <li>Founder at <a href="https://aniekanisrael.lovable.app" style="color:var(--gold);text-decoration:none">aniekanisrael.lovable.app</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUSES -->
+  <section class="bonuses-section">
+    <div class="container">
+      <div class="bonus-header fade-in">
+        <div class="section-label" style="text-align:center">Exclusive Bonuses</div>
+        <h2 style="text-align:center">Order Today &amp; Get These<br><em>4 Free Gifts</em></h2>
+        <p class="value-note">Worth ₦15,000+ in combined value — yours free when you buy the book</p>
+      </div>
+
+      <!-- ⚠️ UPDATE THESE BONUS NAMES & DESCRIPTIONS with the actual resources from https://aniekanisrael.lovable.app/resources -->
+      <div class="bonuses-list">
+        <div class="bonus-item fade-in">
+          <div class="bonus-number">1</div>
+          <div class="bonus-content">
+            <h3>Free Resource #1 — The Mind Reset Workbook</h3>
+            <p>A hands-on workbook to help you apply the core concepts from the book to your real life — structured exercises, reflection prompts, and action steps that move you from insight to change.</p>
+          </div>
+          <div class="bonus-value">
+            <div class="was">₦5,000</div>
+            <div class="free">FREE</div>
+          </div>
+        </div>
+
+        <div class="bonus-item fade-in">
+          <div class="bonus-number">2</div>
+          <div class="bonus-content">
+            <h3>Free Resource #2 — Purpose Discovery Guide</h3>
+            <p>A focused guide to doing the inner work of identifying your unique purpose — so your direction is no longer a guess but a conviction you can act on every single day.</p>
+          </div>
+          <div class="bonus-value">
+            <div class="was">₦4,000</div>
+            <div class="free">FREE</div>
+          </div>
+        </div>
+
+        <div class="bonus-item fade-in">
+          <div class="bonus-number">3</div>
+          <div class="bonus-content">
+            <h3>Free Resource #3 — Cognitive Performance Blueprint</h3>
+            <p>The exact mental frameworks Aniekan uses to maintain peak cognitive performance consistently — including daily rituals, focus protocols, and energy management strategies.</p>
+          </div>
+          <div class="bonus-value">
+            <div class="was">₦3,500</div>
+            <div class="free">FREE</div>
+          </div>
+        </div>
+
+        <div class="bonus-item fade-in">
+          <div class="bonus-number">4</div>
+          <div class="bonus-content">
+            <h3>Free Resource #4 — The T.E.A. Action Planner</h3>
+            <p>A practical planner built around the book's T.E.A. (Think. Engage. Act.) framework — so you can turn every ambitious goal into a concrete, achievable daily action plan.</p>
+          </div>
+          <div class="bonus-value">
+            <div class="was">₦2,500</div>
+            <div class="free">FREE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE STACK + PRICE REVEAL -->
+  <section class="value-stack-section" id="buy-now">
+    <div class="container">
+      <div class="value-stack-box fade-in">
+        <h2>Everything You Get <em>Today</em></h2>
+
+        <div class="value-line">
+          <span class="item-name"><strong>Are You The Problem?</strong> — Full Book</span>
+          <span class="item-price">₦8,000</span>
+        </div>
+        <div class="value-line">
+          <span class="item-name">Bonus #1 — The Mind Reset Workbook</span>
+          <span class="item-price free">FREE</span>
+        </div>
+        <div class="value-line">
+          <span class="item-name">Bonus #2 — Purpose Discovery Guide</span>
+          <span class="item-price free">FREE</span>
+        </div>
+        <div class="value-line">
+          <span class="item-name">Bonus #3 — Cognitive Performance Blueprint</span>
+          <span class="item-price free">FREE</span>
+        </div>
+        <div class="value-line">
+          <span class="item-name">Bonus #4 — The T.E.A. Action Planner</span>
+          <span class="item-price free">FREE</span>
+        </div>
+
+        <div class="value-total">
+          <div class="total-label">Total Value</div>
+          <div class="total-amount">₦23,000</div>
+        </div>
+
+        <div class="price-reveal">
+          <div class="today-label">Your Price Today</div>
+          <div class="big-price"><sup>₦</sup>3,000</div>
+          <div class="savings">You save ₦20,000 — 87% OFF</div>
+
+          <!-- ⚠️ UPDATE href with your actual payment link (Paystack, Flutterwave, etc.) -->
+          <a href="YOUR_PAYMENT_LINK_HERE" class="btn-primary pulse" style="display:block;margin-top:28px;">
+            Get Instant Access — ₦3,000
+          </a>
+
+          <div class="price-secure">
+            🔒 Secure Payment &nbsp;·&nbsp; Instant Digital Delivery &nbsp;·&nbsp; 100% Safe Checkout
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCARCITY / URGENCY -->
+  <div class="scarcity-section">
+    <div class="scarcity-inner fade-in">
+      <p><strong>⚡ This price won't last.</strong> This is a special launch offer and the price will increase soon. Once the timer hits zero, the ₦3,000 deal is gone.</p>
+      <div class="countdown">
+        <div class="countdown-unit">
+          <span class="num" id="hours">23</span>
+          <span class="unit-label">Hours</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <span class="num" id="minutes">59</span>
+          <span class="unit-label">Minutes</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <span class="num" id="seconds">59</span>
+          <span class="unit-label">Seconds</span>
+        </div>
+      </div>
+      <p>Don't let the price of hesitation cost you more than ₦3,000.</p>
+    </div>
+  </div>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee-section">
+    <div class="guarantee-box fade-in">
+      <div class="guarantee-badge">🛡️</div>
+      <h2>My Personal <em>Guarantee</em></h2>
+      <p>
+        Read this book. Apply what's in it. If you genuinely feel it did not shift your thinking,
+        challenge your assumptions, or give you at least one mental tool you'll use for life —
+        reach out and I will make it right.
+      </p>
+      <br />
+      <p>
+        I'm that confident in what this book will do for you. The only risk here is <em>not</em> reading it
+        and staying exactly where you are.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="section-label fade-in" style="text-align:center">Last Chance</div>
+      <h2 class="fade-in">The Version of You <em>On The Other Side</em><br>of This Book is Waiting.</h2>
+      <p class="fade-in">
+        Every day you don't examine how you think is another day your potential stays locked.
+        For ₦3,000, you get the book, the bonuses, and the roadmap to becoming someone
+        who gets out of their own way.
+      </p>
+      <!-- ⚠️ UPDATE href with your actual payment link -->
+      <a href="YOUR_PAYMENT_LINK_HERE" class="btn-primary pulse fade-in" style="font-size:1.15rem;padding:20px 48px;">
+        Get The Book + All 4 Bonuses — ₦3,000
+      </a>
+      <p class="hero-guarantee fade-in" style="justify-content:center;margin-top:16px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Satisfaction Guaranteed &nbsp;·&nbsp; Instant Access After Payment
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-label fade-in" style="text-align:center">FAQ</div>
+      <h2 style="text-align:center" class="fade-in">Questions? <em>Answered.</em></h2>
+      <div class="faq-list">
+        <details class="fade-in">
+          <summary>Is this a physical book or digital?</summary>
+          <p>This is a digital book (e-book). You'll receive instant access to download it immediately after payment. No shipping, no waiting.</p>
+        </details>
+        <details class="fade-in">
+          <summary>How do I get the 4 free bonuses?</summary>
+          <p>All bonuses are automatically included with your purchase. After payment, you'll receive a link to access both the book and all four bonus resources.</p>
+        </details>
+        <details class="fade-in">
+          <summary>Who is this book for?</summary>
+          <p>This book is for anyone who feels stuck, repeats the same patterns, has big dreams but struggles to execute, or simply knows their mindset could be the biggest upgrade they make. Whether you're a student, professional, entrepreneur, or creative — if you think, this book is for you.</p>
+        </details>
+        <details class="fade-in">
+          <summary>What if I'm not satisfied?</summary>
+          <p>Aniekan stands behind this book fully. If you've genuinely read it and don't feel it was worth your time or money, reach out directly and the situation will be made right.</p>
+        </details>
+        <details class="fade-in">
+          <summary>Is payment secure?</summary>
+          <p>Yes. Payment is processed through a secure, trusted payment gateway. Your information is fully protected.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- P.S. -->
+  <div class="ps-section">
+    <div class="ps-box fade-in">
+      <div class="ps-label">P.S.</div>
+      <p>
+        <strong>Here's the reality:</strong> staying where you are also has a cost. It costs you in time, in missed opportunities,
+        in the compounding weight of knowing you could be further.
+        <strong>Are You The Problem?</strong> is ₦3,000 and about four hours of your life.
+        The version of you that reads this book will never see the world the same way again.
+        <a href="YOUR_PAYMENT_LINK_HERE" style="color:var(--gold);font-weight:700;text-decoration:none;">Click here to get your copy now →</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Aniekan Israel. All rights reserved. &nbsp;|&nbsp; <a href="https://aniekanisrael.lovable.app">aniekanisrael.lovable.app</a></p>
+    <p style="margin-top:8px">This site is not affiliated with any third party platform. Results may vary per individual.</p>
+  </footer>
+
+  <script>
+    // ── COUNTDOWN TIMER ──
+    // Sets a 24-hour deadline stored in localStorage so it persists on refresh
+    (function() {
+      const KEY = 'ayp_deadline';
+      let deadline = localStorage.getItem(KEY);
+      if (!deadline || isNaN(new Date(deadline).getTime())) {
+        deadline = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+        localStorage.setItem(KEY, deadline);
+      }
+      const end = new Date(deadline).getTime();
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function tick() {
+        const now = Date.now();
+        const diff = Math.max(0, end - now);
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('hours').textContent = pad(h);
+        document.getElementById('minutes').textContent = pad(m);
+        document.getElementById('seconds').textContent = pad(s);
+        if (diff > 0) requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    // ── SCROLL FADE-IN ──
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
